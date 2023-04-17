@@ -12,7 +12,7 @@
 3. Definir o modelo de domínio usando classes e com propriedades e comportamentos: ********Product e Category;********
 4. Definir qual arquitetura a ser usada no projeto: *********************************************************************************************************************Usar a abordagem da Clean Architecture;*********************************************************************************************************************
 5. Definir os padrões que iremos implementar no projeto: ******MVC, Respository e CQRS;******
-6. Definir os atributos para o domínio ******************Product: *****************************Id(int, Identity), Name (string), Description(string), Price(decimal), Stock(int), Image(string);*******************************
+6. Definir os atributos para o domínio Product: *****************************Id(int, Identity), Name (string), Description(string), Price(decimal), Stock(int), Image(string);*******************************
 7. Definir os atributos para o domínio ********Category: *****************CategoryId(int, Idetity), Name(string);*******************
 8. Definir o relacionamento usado: teremos um relacionamento um para muitos(1,N) entre ***************Categoria e Produto.***************
 
@@ -62,8 +62,6 @@
 - *********************************CamelCase:********************************* Em palavras compostas ou frases. a primeira letra da primeira palavra é iniciada com minúscula e unidas sem espaços. Ex: valorDoDesconto, nomeCompleto;
 - ************************************PascalCase:************************************ Em palavras compostas ou frases montadas com palavras, a primeira letra de cada palavra é iniciada com maiúscula. Ex: CalculaImpostoDeRenda(), ValorDoDesconto;
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b96bfd00-da2b-4565-b921-53db2f807aaa/Untitled.png)
-
 - Idioma: Inglês.
 
 ****************Escopo Geral - Estrutura do Projeto****************
@@ -93,8 +91,4 @@ Os demais projetos serão do tipo Class Library(.NET 6.0)
 - ******************************************CleanArchMvc.Infra.IoC:****************************************** Dependência com os projetos: Domain, Application, Infra.Data;
 - *********************************************CleanArchMvc.WebUI:********************************************* Dependência com o projeto: Infra.IoC.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0eee5959-1c8c-44d8-b913-df41395ea685/Untitled.png)
-
 ****************Estrutura do Projeto - Componentes distribuídos por camadas e responsabilidade****************
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1fe1782c-bc1b-419f-a43e-e880601d8f56/Untitled.png)
