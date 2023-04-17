@@ -1,4 +1,4 @@
-# CleanArchMvc
+# Projeto E-Commerce
 
 ************************Escopo Geral************************
 
@@ -13,7 +13,7 @@
 4. Definir qual arquitetura a ser usada no projeto: *********************************************************************************************************************Usar a abordagem da Clean Architecture;*********************************************************************************************************************
 5. Definir os padrões que iremos implementar no projeto: ******MVC, Respository e CQRS;******
 6. Definir os atributos para o domínio Product: *****************************Id(int, Identity), Name (string), Description(string), Price(decimal), Stock(int), Image(string);*******************************
-7. Definir os atributos para o domínio ********Category: *****************CategoryId(int, Idetity), Name(string);*******************
+7. Definir os atributos para o domínio Category: *****************CategoryId(int, Idetity), Name(string);*******************
 8. Definir o relacionamento usado: teremos um relacionamento um para muitos(1,N) entre ***************Categoria e Produto.***************
 
 ********Escopo Geral - Definição das regras de negócio para “Produto”********
@@ -53,7 +53,7 @@
 - Usar a ferramenta ORM: ***Entity Framework Core***;
 - Usar a abordagem ***Code-First*** do ******************Entity Framework Core****************** para criar o banco de dados e as tabelas;
 - Provedor do banco de dados: ************************************************Microsoft.EntityFrameworkCore.SqlServer;************************************************
-- Ferramenta para aplicar o **************************Migrations: ****************Microsoft.EntityFrameworkCore.Tools;******************
+- Ferramenta para aplicar o Migrations: ****************Microsoft.EntityFrameworkCore.Tools;******************
 - Desacoplar a camada de acesso a dados do ORM: ******************************************************Padrão Repository.******************************************************
 
 **********************************Escopo Geral - Nomenclatura**********************************
