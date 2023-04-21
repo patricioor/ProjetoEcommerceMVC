@@ -11,7 +11,7 @@ namespace CleanArchMvc.Infra.IoC
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"), 
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer/*provedor do banco de dados*/(configuration.GetConnectionString("DefaultConnection"/*string de conexão*/), 
                 b=> b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
             // recomendação para aplicações web é AddScoped

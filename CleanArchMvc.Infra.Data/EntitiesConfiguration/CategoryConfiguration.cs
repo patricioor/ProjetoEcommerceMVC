@@ -8,6 +8,7 @@ namespace CleanArchMvc.Infra.Data.EntitiesConfiguration
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
+            //Configurações da entidade
             // PK
             builder.HasKey(t => t.Id);
             // Limitando a 100 caracteres e tornando "nullable" false

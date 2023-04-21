@@ -8,6 +8,7 @@ namespace CleanArchMvc.Infra.Data.EntitiesConfiguration
     {
         public void Configure(EntityTypeBuilder<Product> builder)
         {
+            //Configurações da entidade
             //PK
             builder.HasKey(t => t.Id);
 
