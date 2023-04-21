@@ -15,7 +15,7 @@ namespace CleanArchMvc.Infra.IoC
                 b=> b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
             // recomendação para aplicações web é AddScoped
-            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<ICategoryServices, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
 
             return services;

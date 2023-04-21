@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchMvc.Infra.Data.Repositories
 {
-    public class CategoryRepository : ICategoryRepository
+    public class CategoryRepository : ICategoryServices
     {
         ApplicationDbContext _categoryContext;
         public CategoryRepository(ApplicationDbContext context) => _categoryContext = context;
