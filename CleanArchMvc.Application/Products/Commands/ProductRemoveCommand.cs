@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CleanArchMvc.Application.Products.Commands
+﻿namespace CleanArchMvc.Application.Products.Commands
 {
-    internal class ProductRemoveCommand
+    public class ProductRemoveCommand : ProductCommand
     {
+        public int Id { get; set; }
+        public ProductRemoveCommand(int id)
+        {
+            Id = id;
+        }
     }
 }
