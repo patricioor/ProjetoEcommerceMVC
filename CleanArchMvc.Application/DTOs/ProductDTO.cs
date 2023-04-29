@@ -38,6 +38,7 @@ namespace CleanArchMvc.Application.DTOs
         public string Image { get; set; }
         public Category Category { get; set; }
 
+        [Required(ErrorMessage = "Category is Required")]
         [DisplayName("Categories")]
         public int CategoryId { get; set; }
     }
