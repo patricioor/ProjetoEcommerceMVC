@@ -7,30 +7,33 @@ namespace CleanArchMvc.Infra.Data.Repositories
 {
     public class ProductRepository : IProductRepository
     {
-            ApplicationDbContext _productContext;
-        public ProductRepository(ApplicationDbContext context) => _productContext = context;
+        private ApplicationDbContext _productContext;
+        public ProductRepository(ApplicationDbContext context)
+        {
+            _productContext = context;
+        }
 
         public async Task<Product> CreateAsync(Product product)
         {
-            //adiciona um produto a tabela produts
             _productContext.Add(product);
-            //salva as mudanças
             await _productContext.SaveChangesAsync();
             return product;
         }
+
         public async Task<Product> GetByIdAsync(int? id) =>
-            // carregamento adiantado ou eager loading. Pesquisa pelo Id product vai retornar o produto e a categoria relacionada
-            await _productContext.Products.Include(c => c.Category).SingleOrDefaultAsync(p => p.Id == id);
-            // Procura na tabela Products o Id
-            //await _productContext.Products.FindAsync(id);
+                // carregamento adiantado ou eager loading. Pesquisa pelo Id product vai retornar o produto e a categoria relacionada
+                await _productContext.Products.Include(c => c.Category).SingleOrDefaultAsync(p => p.Id == id);
+        // Procura na tabela Products o Id
+        //await _productContext.Products.FindAsync(id);
 
         //funcionalidade herdada pelo método GetByIdAsync
         //public async Task<Product> GetProductCategoryAsync(int? id) =>
         //    await _productContext.Products.Include(c => c.Category).SingleOrDefaultAsync(p => p.Id == id);
 
-        public async Task<IEnumerable<Product>> GetProductsAsync() => 
-            // Listar todos os produtos
-            await _productContext.Products.ToListAsync();
+        public async Task<IEnumerable<Product>> GetProductsAsync()
+        {
+            return await _productContext.Products.ToListAsync();
+        }
 
         public async Task<Product> RemoveAsync(Product product)
         {
@@ -38,6 +41,7 @@ namespace CleanArchMvc.Infra.Data.Repositories
             await _productContext.SaveChangesAsync();
             return product;
         }
+
         public async Task<Product> UpdateAsync(Product product)
         {
             _productContext.Update(product);
@@ -46,3 +50,6 @@ namespace CleanArchMvc.Infra.Data.Repositories
         }
     }
 }
+
+
+

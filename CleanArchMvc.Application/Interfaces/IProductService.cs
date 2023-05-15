@@ -1,18 +1,19 @@
-﻿
-using CleanArchMvc.Application.DTOs;
+﻿using CleanArchMvc.Application.DTOs;
 
 namespace CleanArchMvc.Application.Interfaces
 {
     public interface IProductService
     {
-        Task<IEnumerable<ProductDTO>> GetProdutcs();
+        Task<IEnumerable<ProductDTO>> GetProducts();
         Task<ProductDTO> GetById(int? id);
 
-        //herdado pelo método GetById
-        //Task<ProductDTO> GetProductCategory(int? categoryId);
-
-        Task Add(ProductDTO productDTO);
-        Task Update(ProductDTO productDTO);
-        Task Delete(int? id);
+        //substituido pelo método GetById
+        //Task<ProductDTO> GetProductCategory(int? id);
+        Task Add(ProductDTO productDto);
+        Task Update(ProductDTO productDto);
+        Task Remove(int? id);
     }
 }
+
+
+

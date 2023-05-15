@@ -13,3 +13,4 @@ namespace CleanArchMvc.Application.Products.Commands
         public int CategoryId { get; set; }
     }
 }
+

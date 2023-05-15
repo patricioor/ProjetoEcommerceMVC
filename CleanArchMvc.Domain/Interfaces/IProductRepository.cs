@@ -6,7 +6,7 @@ namespace CleanArchMvc.Domain.Interfaces
     {
         Task<IEnumerable<Product>> GetProductsAsync();
         Task<Product> GetByIdAsync(int? id);
-        
+
         //herdado pelo método GetByIdAsync
         //Task<Product> GetProductCategoryAsync(int? id);
 
@@ -15,4 +15,7 @@ namespace CleanArchMvc.Domain.Interfaces
         Task<Product> RemoveAsync(Product product);
     }
 }
+
+
+
 

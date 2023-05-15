@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace CleanArchMvc.WebUI.Controllers
+namespace CleanArchMvc.WebUI.Controllers;
+
+public class HomeController : Controller
 {
-    public class HomeController : Controller
+    public IActionResult Index()
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        return View();
+    }
+
+    public IActionResult Privacy()
+    {
+        return View();
     }
 }
